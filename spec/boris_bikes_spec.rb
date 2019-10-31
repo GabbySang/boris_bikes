@@ -12,7 +12,13 @@ it "responds to working method and returns true" do
   docking_station = DockingStation.new
   expect(docking_station.release_bike.working?).to be true
 end
+
+it "docks the bikes" do
+docking_station = DockingStation.new
+expect(docking_station).to respond_to(:dock)
 end
+end
+
 
 
 
