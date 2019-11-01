@@ -4,19 +4,25 @@ require_relative 'bike'
 
 class DockingStation
 attr_reader :bike
-
 @bike = @bike
+@docked = [@bike]
 
+def initialize
 
-def dock
-  
-    docked = [@bike]
-    fail "No Bikes" unless docked.count > 0
+   @docked = [@bike]
+end
+
+def release_bike
+
+    @docked = [@bike]
+    fail "No Bikes" unless @docked.count > 0
+    Bike.new
   end
 
 
-  def release_bike
-       Bike.new
+  def dock
+    fail "Dock full" unless @docked.count > 1
+       @bike
      end
 
 def countbike

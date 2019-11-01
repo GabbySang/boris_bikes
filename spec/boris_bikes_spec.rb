@@ -25,6 +25,10 @@ docking_station = DockingStation.new
 expect(docking_station).to respond_to(:dock)
 end
 
+it "states when the dock is full" do
+  docking_station = DockingStation.new
+  expect {docked.count > 1}.to raise_error(NameError)
+end
 
 end
 
