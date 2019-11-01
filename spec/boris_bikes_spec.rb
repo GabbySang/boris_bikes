@@ -5,7 +5,7 @@ describe DockingStation do
 
 it "raises an error when there are no bikes docked" do
     docking_station = DockingStation.new
-    expect {docked.count < 1}.to raise_error(NameError)
+    expect {bike_no.count < 1}.to raise_error(NameError)
 end
 
 it { should respond_to(:release_bike) }
@@ -27,7 +27,7 @@ end
 
 it "states when the dock is full" do
   docking_station = DockingStation.new
-  expect {docked.count > 1}.to raise_error(NameError)
+  expect {bike_no.count > 20}.to raise_error(NameError)
 end
 
 end

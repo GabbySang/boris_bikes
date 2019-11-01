@@ -4,30 +4,34 @@ require_relative 'bike'
 
 class DockingStation
 attr_reader :bike
-@bike = @bike
-@docked = [@bike]
 
-def initialize
-
-   @docked = [@bike]
+def initialize bike_no = []
+@bike_no = bike_no
 end
+# @docked = [@bike]
+#
+# def initialize
+#
+#    @docked = [@bike]
+# end
 
 def release_bike
 
-    @docked = [@bike]
-    fail "No Bikes" unless @docked.count > 0
+    # @docked = [@bike]
+    fail "No Bikes" unless @bike_no.count < 1
     Bike.new
   end
 
 
   def dock
-    fail "Dock full" unless @docked.count > 1
+    fail "Dock full" unless @bike_no.count < 20
        @bike
      end
+   end
 
-def countbike
-  puts @docked.count
-end
+# def countbike
+#   puts @docked.count
+# end
 
 # def check
 #   docked = []
@@ -37,7 +41,6 @@ end
 #
 #   # elsif @docked = nil then  raise_error(NameError)
 # end
-end
 
 
       # return nil if
@@ -92,4 +95,12 @@ recognised, Part10
 #   @bike
 # end
 #
+# end
+
+# @bike = @bike
+# @docked = [@bike]
+#
+# def initialize
+#
+#    @docked = [@bike]
 # end
