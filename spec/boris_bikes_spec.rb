@@ -1,7 +1,14 @@
 require './lib/boris_bikes'
 
 describe DockingStation do
-  it { should respond_to(:release_bike) }
+  # it { should respond_to(:release_bike) }
+
+it "raises an error when there are no bikes docked" do
+    docking_station = DockingStation.new
+    expect {docked.count < 1}.to raise_error(NameError)
+end
+
+it { should respond_to(:release_bike) }
 
 it "responds to working method" do
 docking_station = DockingStation.new
@@ -17,10 +24,12 @@ it "docks the bikes" do
 docking_station = DockingStation.new
 expect(docking_station).to respond_to(:dock)
 end
+
+
 end
 
 
-
+# expect {(bike).to be (0)}.to raise_error(NameError)
 
 
 

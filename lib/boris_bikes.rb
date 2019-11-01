@@ -5,19 +5,55 @@ require_relative 'bike'
 class DockingStation
 attr_reader :bike
 
-  def release_bike
-      Bike.new
+@bike = @bike
+
+
+def dock
+  
+    docked = [@bike]
+    fail "No Bikes" unless docked.count > 0
   end
 
-    def dock(bike)
-      @bike 
+
+  def release_bike
+       Bike.new
+     end
+
+def countbike
+  puts @docked.count
 end
 
-def bike
-  @bike
+# def check
+#   docked = []
+#   fail "No Bikes" unless docked.count > 0
+#   # if @docked[0] = nil then raise_error(NameError)
+#   # if @docked[0] = "no more bikes" then raise_error(NameError)
+#
+#   # elsif @docked = nil then  raise_error(NameError)
+# end
 end
 
-end
+
+      # return nil if
+      # count = 0
+      # count = count + 1
+# unless @states.empty
+    # def dock(bike)
+    #   @bike
+    # end
+      # @docked << @bike
+      # docked = []
+      # docked << @bike
+      # if docked[0] = nil then raise_error(NameError)
+
+
+
+# def bike
+#   @bike
+# end
+
+
+
 
 
 
